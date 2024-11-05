@@ -31,3 +31,18 @@ function saveStory() {
         alert("Παρακαλώ προσθέστε μια ιστορία!");
     }
 }
+
+// Προσθήκη κλάσης 'visible' για το Scroll Animation
+window.addEventListener("scroll", function () {
+    const elements = document.querySelectorAll(".fade-in");
+    elements.forEach(function (element) {
+        if (element.getBoundingClientRect().top < window.innerHeight) {
+            element.classList.add("visible");
+        }
+    });
+});
+
+// Λειτουργία για το κουμπί CTA (Ξεκινήστε το Κέντημα)
+function startEmbroidery() {
+    alert("Ξεκινάτε το Κέντημα! Επιλέξτε ένα μοτίβο και ξεκινήστε να τοποθετείτε τις βελονιές!");
+}
