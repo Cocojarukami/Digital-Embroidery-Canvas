@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+#canvas-container {
+    margin: 20px 0;
+}
+
+canvas {
+    border: 1px solid #2c3e50;
+}
+
+#pattern-selector {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pattern img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: 2px solid #2c3e50;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#story-area {
+    margin-top: 20px;
+}
+
+#story-input {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #34495e;
+}
