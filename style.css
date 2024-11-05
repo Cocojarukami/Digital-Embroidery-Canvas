@@ -1,123 +1,62 @@
-/* Γενικό στυλ */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
+/* Γενικές Ρυθμίσεις Στυλ */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Ο container για τα περιεχόμενα */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
 }
 
-h1 {
-    font-size: 36px;
-    color: #2c3e50;
-    margin-top: 40px;
-}
-
-/* Focal Point: Call-to-Action (CTA) Button */
-.cta-container {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.cta-button {
-    background-color: #FF5733; /* Bold color */
-    color: white;
-    padding: 20px 40px;
-    font-size: 22px;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #D44C29;
-}
-
-/* Διαδραστικός καμβάς */
-#canvas-container {
-    margin-top: 40px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    background-color: white;
-    position: relative;
-}
-
-canvas {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
-/* Επικεφαλίδες */
-h3 {
-    font-size: 24px;
-    color: #2c3e50;
-    margin-top: 40px;
+/* Κεφαλίδα */
+header {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-/* Μοτίβα με hover effect */
-.pattern img {
-    width: 80px;
-    height: 80px;
-    margin: 0 15px;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    border: 2px solid #2c3e50;
-    padding: 5px;
+header h1 {
+    font-size: 2em;
+    color: #333;
 }
 
-.pattern img:hover {
-    transform: scale(1.1);
+/* Διάταξη Πλέγματος για τις Κάρτες */
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    width: 100%;
+    max-width: 1200px;
 }
 
-/* Story Section */
-#story-area {
-    margin-top: 40px;
+/* Κάρτες */
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s ease;
 }
 
-#story-input {
-    width: 80%;
-    height: 100px;
-    padding: 10px;
-    margin-top: 10px;
-    font-size: 16px;
-    border: 1px solid #2c3e50;
-    border-radius: 5px;
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #2c3e50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.card p, .card ul {
+    font-size: 1em;
+    line-height: 1.6;
 }
 
-button:hover {
-    background-color: #34495e;
-}
-
-/* Εφέ Ανάδυσης για Scroll Animations */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* Στυλ Κατάστασης Hover */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
