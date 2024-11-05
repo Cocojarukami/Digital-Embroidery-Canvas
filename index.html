@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ψηφιακό Κέντημα ως Χώρος Μνήμης</title>
+    <title>Διαδραστικό Ψηφιακό Κέντημα</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="fade-in">Ψηφιακό Κέντημα ως Χώρος Μνήμης</h1>
-
-        <!-- Hero Image or Call-to-Action (CTA) Button -->
-        <div class="cta-container">
-            <button class="cta-button fade-in" onclick="startEmbroidery()">Ξεκινήστε το Κέντημα</button>
+    <header>
+        <h1>Διαδραστικό Ψηφιακό Κέντημα ως Χώρος Μνήμης</h1>
+    </header>
+    
+    <main class="grid-container">
+        <div class="card">
+            <h2>Περιγραφή του Έργου</h2>
+            <p>Ένα ψηφιακό έργο που συνδυάζει την τέχνη του κεντήματος με τη μνήμη και την πολιτισμική παράδοση, επιτρέποντας στους χρήστες να δημιουργούν προσωπικά ψηφιακά έργα τέχνης.</p>
         </div>
 
-        <div id="canvas-container" class="fade-in">
-            <canvas id="embroidery-canvas" width="600" height="600"></canvas>
+        <div class="card">
+            <h2>Κύρια Χαρακτηριστικά</h2>
+            <ul>
+                <li>Διαδραστικός καμβάς για κέντημα</li>
+                <li>Βιβλιοθήκη με παραδοσιακά μοτίβα</li>
+                <li>Συμβολικές αφηγήσεις και ιστορίες</li>
+            </ul>
         </div>
 
-        <div id="pattern-selector" class="fade-in">
-            <h3>Επιλέξτε Μοτίβο</h3>
-            <div class="pattern" onclick="addPattern('assets/pattern1.svg')">
-                <img src="assets/pattern1.svg" alt="Pattern 1" />
-            </div>
-            <div class="pattern" onclick="addPattern('assets/pattern2.svg')">
-                <img src="assets/pattern2.svg" alt="Pattern 2" />
-            </div>
-            <div class="pattern" onclick="addPattern('assets/pattern3.svg')">
-                <img src="assets/pattern3.svg" alt="Pattern 3" />
-            </div>
+        <div class="card">
+            <h2>Ιστορίες και Μνήμες</h2>
+            <p>Εξερευνήστε τη σημασία των μοτίβων και τις ιστορίες πίσω από κάθε σχέδιο, για μια βαθύτερη σύνδεση με την παράδοση.</p>
         </div>
 
-        <!-- Story Section -->
-        <div id="story-area" class="fade-in">
-            <h3>Προσθέστε την Ιστορία σας</h3>
-            <textarea id="s
+        <div class="card">
+            <h2>Προβολή και Κοινοποίηση Δημιουργιών</h2>
+            <p>Οι χρήστες μπορούν να αποθηκεύσουν και να μοιραστούν τα ψηφιακά τους κεντήματα, ενσωματώνοντας προσωπικές ιστορίες και συναισθήματα.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
