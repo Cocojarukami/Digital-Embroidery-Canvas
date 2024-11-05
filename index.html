@@ -8,13 +8,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>Ψηφιακό Κέντημα ως Χώρος Μνήμης</h1>
+        <h1 class="fade-in">Ψηφιακό Κέντημα ως Χώρος Μνήμης</h1>
 
-        <div id="canvas-container">
+        <!-- Hero Image or Call-to-Action (CTA) Button -->
+        <div class="cta-container">
+            <button class="cta-button fade-in" onclick="startEmbroidery()">Ξεκινήστε το Κέντημα</button>
+        </div>
+
+        <div id="canvas-container" class="fade-in">
             <canvas id="embroidery-canvas" width="600" height="600"></canvas>
         </div>
 
-        <div id="pattern-selector">
+        <div id="pattern-selector" class="fade-in">
             <h3>Επιλέξτε Μοτίβο</h3>
             <div class="pattern" onclick="addPattern('assets/pattern1.svg')">
                 <img src="assets/pattern1.svg" alt="Pattern 1" />
@@ -27,14 +32,7 @@
             </div>
         </div>
 
-        <div id="story-area">
-            <h3>Ιστορία του Κεντήματος</h3>
-            <textarea id="story-input" placeholder="Προσθέστε την ιστορία σας"></textarea>
-            <button onclick="saveStory()">Αποθήκευση Ιστορίας</button>
-            <p id="story-output"></p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <!-- Story Section -->
+        <div id="story-area" class="fade-in">
+            <h3>Προσθέστε την Ιστορία σας</h3>
+            <textarea id="s
