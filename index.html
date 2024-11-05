@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ψηφιακό Κέντημα ως Χώρος Μνήμης</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ψηφιακό Κέντημα ως Χώρος Μνήμης</h1>
+
+        <div id="canvas-container">
+            <canvas id="embroidery-canvas" width="600" height="600"></canvas>
+        </div>
+
+        <div id="pattern-selector">
+            <h3>Επιλέξτε Μοτίβο</h3>
+            <div class="pattern" onclick="addPattern('assets/pattern1.svg')">
+                <img src="assets/pattern1.svg" alt="Pattern 1" />
+            </div>
+            <div class="pattern" onclick="addPattern('assets/pattern2.svg')">
+                <img src="assets/pattern2.svg" alt="Pattern 2" />
+            </div>
+            <div class="pattern" onclick="addPattern('assets/pattern3.svg')">
+                <img src="assets/pattern3.svg" alt="Pattern 3" />
+            </div>
+        </div>
+
+        <div id="story-area">
+            <h3>Ιστορία του Κεντήματος</h3>
+            <textarea id="story-input" placeholder="Προσθέστε την ιστορία σας"></textarea>
+            <button onclick="saveStory()">Αποθήκευση Ιστορίας</button>
+            <p id="story-output"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
