@@ -1,41 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("canvas");
-    const gridSize = 20; // Define the grid size
-    let selectedStitch = "cross"; // Default stitch type
+    const gridSize = 20; // Μέγεθος 20x20
+    const selectedColor = "#a40707"; // Χρώμα που θα χρησιμοποιήσουμε για το γέμισμα
 
-    // Create the grid cells
-    for (let i = 0; i < gridSize * gridSize; i++) {
-        const cell = document.createElement("div");
-        cell.classList.add("cell");
+    if (canvas) {
+        // Δημιουργία κελιών στο grid
+        for (let i = 0; i < gridSize * gridSize; i++) {
+            const cell = document.createElement("div");
+            cell.classList.add("cell");
 
-        // Add event listener for clicking cells to change the stitch
-        cell.addEventListener("click", function () {
-            // For now, it just applies a default color to the cell
-            cell.style.backgroundColor = "#a40707"; // Example color for the stitch
-        });
-
-        canvas.appendChild(cell);
-    }
-
-    // Function to save the embroidery
-    window.saveCanvas = function () {
-        const canvasData = [];
-        document.querySelectorAll(".cell").forEach(cell => {
-            canvasData.push({
-                color: cell.style.backgroundColor,
+            // Προσθέτουμε event listener για κλικ σε κάθε κελί
+            cell.addEventListener("click", function () {
+                if (cell.style.backgroundColor === selectedColor) {
+                    // Αν το κελί είναι ήδη χρωματισμένο, επαναφέρεται στο αρχικό
+                    cell.style.backgroundColor = "#ffffff";
+                } else {
+                    // Αλλιώς, το χρωματίζουμε με το επιλεγμένο χρώμα
+                    cell.style.backgroundColor = selectedColor;
+                }
             });
-        });
-        localStorage.setItem("canvasData", JSON.stringify(canvasData));
-        alert("Embroidery saved!");
-    };
 
-    // Function to download the embroidery as an image
-    window.downloadCanvasAsImage = function () {
-        html2canvas(document.getElementById("canvas")).then(canvas => {
-            const link = document.createElement("a");
-            link.download = "folklore_embroidery.png";
-            link.href = canvas.toDataURL("image/png");
-            link.click();
-        });
-    };
+            canvas.appendChild(cell);
+        }
+    } else {
+        console.error("Το στοιχείο canvas δεν βρέθηκε.");
+    }
 });
