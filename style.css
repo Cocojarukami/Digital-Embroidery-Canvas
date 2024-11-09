@@ -1,62 +1,81 @@
-/* Γενικές Ρυθμίσεις Στυλ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+:root {
+    --bg-color: #f4f4f9;
+    --accent-color: #a40707;
+    --grid-border-color: #c8df87;
+    --text-color: #333;
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
     padding: 20px;
 }
 
-/* Κεφαλίδα */
 header {
     text-align: center;
     margin-bottom: 20px;
 }
 
-header h1 {
-    font-size: 2em;
-    color: #333;
+h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    letter-spacing: 0.1em;
 }
 
-/* Διάταξη Πλέγματος για τις Κάρτες */
-.grid-container {
+p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.pattern-container {
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    width: 100%;
-    max-width: 1200px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-/* Κάρτες */
-.card {
+.pattern {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.pattern:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+#canvas {
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
+    gap: 1px;
+    border: 2px solid var(--grid-border-color);
+    padding: 10px;
+    background-color: #fff;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
     background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    padding: 20px;
-    transition: transform 0.2s ease;
-}
-
-.card h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.card p, .card ul {
-    font-size: 1em;
-    line-height: 1.6;
-}
-
-/* Στυλ Κατάστασης Hover */
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--grid-border-color);
+    transition: background-color 0.3s;
 }
