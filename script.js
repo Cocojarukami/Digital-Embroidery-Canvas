@@ -11,11 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Προσθέτουμε event listener για κλικ σε κάθε κελί
             cell.addEventListener("click", function () {
-                if (cell.style.backgroundColor === selectedColor) {
-                    // Αν το κελί είναι ήδη χρωματισμένο, επαναφέρεται στο αρχικό
+                if (cell.classList.contains("filled")) {
+                    // Αν το κελί είναι γεμάτο, αφαιρούμε την κλάση και το επαναφέρουμε στο λευκό
+                    cell.classList.remove("filled");
                     cell.style.backgroundColor = "#ffffff";
                 } else {
-                    // Αλλιώς, το χρωματίζουμε με το επιλεγμένο χρώμα
+                    // Αν το κελί είναι άδειο, το γεμίζουμε και προσθέτουμε την κλάση filled
+                    cell.classList.add("filled");
                     cell.style.backgroundColor = selectedColor;
                 }
             });
