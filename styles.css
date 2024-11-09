@@ -1,3 +1,4 @@
+/* Βασικά χρώματα */
 :root {
     --bg-color: #f4f4f9;
     --accent-color: #a40707;
@@ -40,6 +41,7 @@ main {
     position: relative;
 }
 
+/* Στυλ μοτίβων γύρω από το grid */
 .pattern-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -62,6 +64,7 @@ main {
     filter: grayscale(0%);
 }
 
+/* Στυλ για το grid */
 #canvas {
     display: grid;
     grid-template-columns: repeat(20, 20px);
@@ -72,10 +75,10 @@ main {
     background-color: #fff;
 }
 
+/* Στυλ για τα κελιά του grid */
 .cell {
     width: 20px;
     height: 20px;
     background-color: #ffffff;
     border: 1px solid var(--grid-border-color);
-    transition: background-color 0.3s;
 }
