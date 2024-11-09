@@ -72,3 +72,18 @@ main {
 #saveButton:hover {
     background-color: #7a0505;
 }
+#saveButton, #retryButton {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+#saveButton:hover, #retryButton:hover {
+    background-color: #7a0505;
+}
+
