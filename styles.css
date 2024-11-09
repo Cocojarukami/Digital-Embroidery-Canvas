@@ -1,84 +1,92 @@
-/* Βασικά χρώματα */
 :root {
-    --bg-color: #f4f4f9;
+    --bg-color: #c8df87;
     --accent-color: #a40707;
-    --grid-border-color: #c8df87;
     --text-color: #333;
+    --cell-border-color: #870505;
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: var(--bg-color);
+    font-family: 'Arial', sans-serif;
     color: var(--text-color);
+    margin: 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
-    padding: 20px;
+    height: 100vh;
 }
 
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--accent-color);
-    letter-spacing: 0.1em;
+    margin: 0;
 }
 
 p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #555;
-    margin-top: 5px;
 }
 
-main {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
 }
 
-/* Στυλ μοτίβων γύρω από το grid */
-.pattern-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+#reference-patterns {
+    display: flex;
     gap: 10px;
     margin-bottom: 20px;
+    justify-content: center;
 }
 
-.pattern {
-    width: 100px;
-    height: 100px;
+.reference-pattern {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--accent-color);
     object-fit: cover;
-    filter: grayscale(100%);
-    opacity: 0.7;
-    transition: opacity 0.2s ease-in-out;
 }
 
-.pattern:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-}
-
-/* Στυλ για το grid */
 #canvas {
     display: grid;
     grid-template-columns: repeat(20, 20px);
     grid-template-rows: repeat(20, 20px);
     gap: 1px;
-    border: 2px solid var(--grid-border-color);
-    padding: 10px;
+    margin-top: 20px;
     background-color: #fff;
+    border: 1px solid var(--accent-color);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Στυλ για τα κελιά του grid */
 .cell {
     width: 20px;
     height: 20px;
-    background-color: #ffffff;
-    border: 1px solid var(--grid-border-color);
+    border: 1px solid var(--cell-border-color);
+    cursor: pointer;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #870505;
 }
