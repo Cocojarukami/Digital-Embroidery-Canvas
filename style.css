@@ -1,3 +1,4 @@
+/* Βασικές μεταβλητές χρώματος */
 :root {
     --bg-color: #f4f4f9;
     --accent-color: #a40707;
@@ -5,6 +6,7 @@
     --text-color: #333;
 }
 
+/* Γενικό στυλ για τη σελίδα */
 body {
     font-family: Arial, sans-serif;
     background-color: var(--bg-color);
@@ -40,28 +42,6 @@ main {
     position: relative;
 }
 
-.pattern-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.pattern {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    filter: grayscale(100%);
-    opacity: 0.7;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.pattern:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-}
-
 #canvas {
     display: grid;
     grid-template-columns: repeat(20, 20px);
@@ -77,5 +57,4 @@ main {
     height: 20px;
     background-color: #ffffff;
     border: 1px solid var(--grid-border-color);
-    transition: background-color 0.3s;
 }
