@@ -1,42 +1,33 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Διαδραστικό Ψηφιακό Κέντημα</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ΦOLKΛORE ΔIGITALITY</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Διαδραστικό Ψηφιακό Κέντημα ως Χώρος Μνήμης</h1>
+        <h1>ΦOLKΛORE ΔIGITALITY</h1>
+        <p>A digital canvas inspired by traditional embroidery patterns.</p>
     </header>
-    
-    <main class="grid-container">
-        <div class="card">
-            <h2>Περιγραφή του Έργου</h2>
-            <p>Ένα ψηφιακό έργο που συνδυάζει την τέχνη του κεντήματος με τη μνήμη και την πολιτισμική παράδοση, επιτρέποντας στους χρήστες να δημιουργούν προσωπικά ψηφιακά έργα τέχνης.</p>
+
+    <main>
+        <!-- Περιοχή με μοτίβα γύρω από το grid -->
+        <div class="pattern-container">
+            <img src="patterns/pattern1.svg" alt="Embroidery Pattern 1" class="pattern">
+            <img src="patterns/pattern2.svg" alt="Embroidery Pattern 2" class="pattern">
+            <img src="patterns/pattern3.svg" alt="Embroidery Pattern 3" class="pattern">
+            <img src="patterns/pattern4.svg" alt="Embroidery Pattern 4" class="pattern">
         </div>
 
-        <div class="card">
-            <h2>Κύρια Χαρακτηριστικά</h2>
-            <ul>
-                <li>Διαδραστικός καμβάς για κέντημα</li>
-                <li>Βιβλιοθήκη με παραδοσιακά μοτίβα</li>
-                <li>Συμβολικές αφηγήσεις και ιστορίες</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Ιστορίες και Μνήμες</h2>
-            <p>Εξερευνήστε τη σημασία των μοτίβων και τις ιστορίες πίσω από κάθε σχέδιο, για μια βαθύτερη σύνδεση με την παράδοση.</p>
-        </div>
-
-        <div class="card">
-            <h2>Προβολή και Κοινοποίηση Δημιουργιών</h2>
-            <p>Οι χρήστες μπορούν να αποθηκεύσουν και να μοιραστούν τα ψηφιακά τους κεντήματα, ενσωματώνοντας προσωπικές ιστορίες και συναισθήματα.</p>
+        <!-- Grid του καμβά -->
+        <div id="canvas">
+            <!-- Τα κελιά του grid δημιουργούνται μέσω JavaScript -->
         </div>
     </main>
 
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
