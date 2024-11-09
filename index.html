@@ -3,35 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOLKLORE DIGITALITY</title>
+    <title>ΦOLKΛORE ΔIGITALITY</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>FOLKLORE DIGITALITY</h1>
-        <p>Create your own digital embroidery by combining traditional patterns and personal memories.</p>
+        <h1>ΦOLKΛORE ΔIGITALITY</h1>
+        <p>A digital canvas inspired by traditional embroidery patterns.</p>
     </header>
 
-    <div class="container">
-        <!-- Reference Patterns Around the Grid -->
-        <div id="reference-patterns">
-            <img src="images/pattern1.svg" alt="Pattern 1" class="reference-pattern">
-            <img src="images/pattern2.svg" alt="Pattern 2" class="reference-pattern">
-            <img src="images/pattern3.svg" alt="Pattern 3" class="reference-pattern">
+    <main>
+        <!-- Περιοχή με μοτίβα γύρω από το grid -->
+        <div class="pattern-container">
+            <img src="patterns/pattern1.svg" alt="Embroidery Pattern 1" class="pattern">
+            <img src="patterns/pattern2.svg" alt="Embroidery Pattern 2" class="pattern">
+            <img src="patterns/pattern3.svg" alt="Embroidery Pattern 3" class="pattern">
         </div>
 
-        <!-- Grid for Embroidery -->
-        <div id="canvas"></div>
-
-        <!-- Control Buttons -->
-        <div class="controls">
-            <button onclick="saveCanvas()">Save Embroidery</button>
-            <button onclick="downloadCanvasAsImage()">Download Embroidery</button>
+        <!-- Grid του καμβά -->
+        <div id="canvas">
+            <!-- Τα κελιά του grid δημιουργούνται μέσω JavaScript -->
         </div>
-    </div>
+    </main>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 </body>
 </html>
