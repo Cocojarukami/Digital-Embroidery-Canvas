@@ -53,5 +53,12 @@ document.addEventListener("DOMContentLoaded", function () {
         link.href = dataURL;
         link.download = "digital_embroidery.png";
         link.click();
+           // Λειτουργία "Retry" για καθαρισμό του grid
+    retryButton.addEventListener("click", function () {
+        const cells = document.querySelectorAll(".cell");
+        cells.forEach(cell => {
+            cell.classList.remove("filled");
+            cell.style.backgroundColor = "#ffffff";
+        });
     });
 });
